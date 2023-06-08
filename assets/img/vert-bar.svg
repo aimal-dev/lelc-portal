@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1421" height="377" viewBox="0 0 1421 377">
+  <defs>
+    <linearGradient id="linear-gradient" x1="2.822" y1="1.407" x2="-1.463" y2="-0.382" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#371d71"/>
+      <stop offset="1" stop-color="#d00000"/>
+    </linearGradient>
+  </defs>
+  <g id="Industry_Graph" data-name="Industry Graph" transform="translate(19090 8488)">
+    <g id="Container" transform="translate(-19090 -8488)" fill="#fff" stroke="#ebebeb" stroke-width="2">
+      <rect width="1421" height="377" rx="8" stroke="none"/>
+      <rect x="1" y="1" width="1419" height="375" rx="7" fill="none"/>
+    </g>
+    <g id="Graph" transform="translate(0 -8419)">
+      <g id="Group_27635" data-name="Group 27635" transform="translate(1201 30)">
+        <text id="Text" transform="translate(-19032 230)" fill="#171717" font-size="15" font-family="Rubik-Regular, Rubik"><tspan x="-39.023" y="14">Agriculture</tspan></text>
+        <rect id="Bar" width="20" height="37" rx="4" transform="translate(-18976 183)" fill="#bebebe"/>
+        <text id="Text-2" data-name="Text" transform="translate(-19032 155)" fill="#171717" font-size="15" font-family="Rubik-Medium, Rubik" font-weight="500"><tspan x="-15.45" y="14">20%</tspan></text>
+      </g>
+      <g id="Group_27631" data-name="Group 27631" transform="translate(1064 30)">
+        <text id="Text-3" data-name="Text" transform="translate(-19032 230)" fill="#171717" font-size="15" font-family="Rubik-Regular, Rubik"><tspan x="-42.015" y="14">Engineering</tspan></text>
+        <rect id="Bar-2" data-name="Bar" width="25" height="76" rx="4" transform="translate(-18978 144)" fill="#bebebe"/>
+        <text id="Text-4" data-name="Text" transform="translate(-19032 116)" fill="#171717" font-size="15" font-family="Rubik-Medium, Rubik" font-weight="500"><tspan x="-15.495" y="14">34%</tspan></text>
+      </g>
+      <g id="Group_27633" data-name="Group 27633" transform="translate(927 30)">
+        <text id="Text-5" data-name="Text" transform="translate(-19032 230)" fill="#171717" font-size="15" font-family="Rubik-Regular, Rubik"><tspan x="-45.697" y="14">Construction</tspan></text>
+        <rect id="Bar-3" data-name="Bar" width="30" height="105" rx="8" transform="translate(-18981 115)" fill="#bebebe"/>
+        <text id="Text-6" data-name="Text" transform="translate(-19032 87)" fill="#171717" font-size="15" font-family="Rubik-Medium, Rubik" font-weight="500"><tspan x="-15.233" y="14">56%</tspan></text>
+      </g>
+      <g id="Group_27636" data-name="Group 27636" transform="translate(790 30)">
+        <text id="Text-7" data-name="Text" transform="translate(-19032 230)" fill="#171717" font-size="15" font-family="Rubik-Regular, Rubik"><tspan x="-37.552" y="14">Hospitality</tspan></text>
+        <rect id="Bar-4" data-name="Bar" width="35" height="124" rx="8" transform="translate(-18983 96)" fill="#bebebe"/>
+        <text id="Text-8" data-name="Text" transform="translate(-19032 68)" fill="#171717" font-size="15" font-family="Rubik-Medium, Rubik" font-weight="500"><tspan x="-15.45" y="14">58%</tspan></text>
+      </g>
+      <g id="Group_27632" data-name="Group 27632" transform="translate(653 30)">
+        <text id="Text-9" data-name="Text" transform="translate(-19032 230)" fill="#171717" font-size="15" font-family="Rubik-Regular, Rubik"><tspan x="-27.6" y="14">Tourism</tspan></text>
+        <rect id="Bar-5" data-name="Bar" width="40" height="150" rx="8" transform="translate(-18986 70)" fill="#bebebe"/>
+        <text id="Text-10" data-name="Text" transform="translate(-19032 42)" fill="#171717" font-size="15" font-family="Rubik-Medium, Rubik" font-weight="500"><tspan x="-15.472" y="14">64%</tspan></text>
+      </g>
+      <g id="Group_27629" data-name="Group 27629" transform="translate(517 30)">
+        <text id="Text-11" data-name="Text" transform="translate(-19032 230)" fill="#171717" font-size="15" font-family="Rubik-Regular, Rubik"><tspan x="-27.765" y="14">Finance</tspan></text>
+        <rect id="Bar-6" data-name="Bar" width="45" height="155" rx="8" transform="translate(-18989 65)" fill="#bebebe"/>
+        <text id="Text-12" data-name="Text" transform="translate(-19032 37)" fill="#171717" font-size="15" font-family="Rubik-Medium, Rubik" font-weight="500"><tspan x="-15.472" y="14">64%</tspan></text>
+      </g>
+      <g id="Group_27630" data-name="Group 27630" transform="translate(381 30)">
+        <text id="Text-13" data-name="Text" transform="translate(-19032 230)" fill="#171717" font-size="15" font-family="Rubik-Regular, Rubik"><tspan x="-34.583" y="14">Marketing</tspan></text>
+        <rect id="Bar-7" data-name="Bar" width="50" height="171" rx="8" transform="translate(-18991 49)" fill="#bebebe"/>
+        <text id="Text-14" data-name="Text" transform="translate(-19032 21)" fill="#171717" font-size="15" font-family="Rubik-Medium, Rubik" font-weight="500"><tspan x="-15.233" y="14">65%</tspan></text>
+      </g>
+      <g id="Group_27634" data-name="Group 27634" transform="translate(245 30)">
+        <text id="Text-15" data-name="Text" transform="translate(-19032 230)" fill="#171717" font-size="15" font-family="Rubik-Regular, Rubik"><tspan x="-43.717" y="14">Art &amp; Design</tspan></text>
+        <rect id="Bar-8" data-name="Bar" width="55" height="192" rx="8" transform="translate(-18994 28)" fill="url(#linear-gradient)"/>
+        <text id="Text-16" data-name="Text" transform="translate(-19032)" fill="#171717" font-size="15" font-family="Rubik-Medium, Rubik" font-weight="500"><tspan x="-14.602" y="14">75%</tspan></text>
+      </g>
+      <g id="Group_27622" data-name="Group 27622" transform="translate(109 30)">
+        <text id="Text-17" data-name="Text" transform="translate(-19032 230)" fill="#171717" font-size="15" font-family="Rubik-Regular, Rubik"><tspan x="-38.325" y="14">Multimedia</tspan></text>
+        <rect id="Bar-9" data-name="Bar" width="60" height="258" rx="8" transform="translate(-18996 -38)" fill="url(#linear-gradient)"/>
+        <text id="Text-18" data-name="Text" transform="translate(-19032 -66)" fill="#171717" font-size="15" font-family="Rubik-Medium, Rubik" font-weight="500"><tspan x="-21.81" y="14">92.5%</tspan></text>
+      </g>
+      <g id="Group_27623" data-name="Group 27623" transform="translate(55)">
+        <text id="Text-19" data-name="Text" transform="translate(-19115 260)" fill="#171717" font-size="15" font-family="Rubik-Regular, Rubik"><tspan x="-48.728" y="14">Computing/IT</tspan></text>
+        <rect id="Bar-10" data-name="Bar" width="65" height="261" rx="8" transform="translate(-19081 -11)" fill="url(#linear-gradient)"/>
+        <text id="Text-20" data-name="Text" transform="translate(-19115 -39)" fill="#171717" font-size="15" font-family="Rubik-Medium, Rubik" font-weight="500"><tspan x="-15.15" y="14">93%</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

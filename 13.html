@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Lelc - Login</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/responsive.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <!-- swiper js -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<style>
+
+</style>
+
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header text-center">
+                <a href="#!">
+                    <img src="./assets/img/Logo.png" alt="">
+                </a>
+            </div>
+
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#!"><img src="./assets/img/overview.svg" alt=""> Overview</a>
+
+                </li>
+                <li>
+                    <a href="#"><img src="./assets/img/progress.svg" alt=""> In Progress</a>
+                </li>
+                <li>
+                    <a href="#!"><img src="./assets/img/skill.svg" alt=""> Skillset</a>
+
+                </li>
+                <li>
+                    <a href="#"><img src="./assets/img/fav.svg" alt=""> Favorite</a>
+                </li>
+                <li>
+                    <a href="#"><img src="./assets/img/logout.svg" alt=""> Logout</a>
+                </li>
+                <li>
+                    <a type="button" id="" class="btn btn-info toggle-class sidebarCollapse text-white mt-5">
+                       Toggle
+                        
+                    </a>
+                </li>
+            </ul>
+
+
+            <div class="position-relative">
+
+            </div>
+
+
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="" class="sidebarCollapse">
+                        <i class="fas fa-align-left"></i>
+                        
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav mr-auto">
+                            <li class="ml-lg-3 ml-0 position-relative">
+                                <form action="">
+                                    <img class="position-absolute search-icon" src="./assets/img/search.svg" alt="" style="top: 9px; left: 13px;">
+                                    <input class="user-search" type="search" placeholder="Search">
+                                </form>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav ml-auto drop-M">
+                            <li class="mr-4 pr-2 mt-3">
+                                <div class="dropdown user dropdown-1">
+                                    <a class="position-relative" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                        <img class="user-img" src="./assets/img/notification.svg" alt="" width="25px">
+                                        <span class="not-up"><sup>3</sup></span>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="">
+                                <div class="dropdown user dropdown-2">
+                                    <a class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                        <img class="user-img" src="./assets/img/pages-img/Pic.png" alt="" width="100%">
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="row no-gutters">
+                <div class="col-12">
+                    <h6>Welcome back</h6>
+                    <h5 class="font-weight-bold">Muhammad Faid bin Mohd Zamin</h5>
+                </div>
+                <!-- left side -->
+                <div class="col-xl-8 mt-3 pr-xl-3">
+                    <!-- swipper js -->
+                    <div class="swipper-box">
+                        <div class="swiper mySwiper">
+                            <h5 class="prg pl-3">In Progress</h5>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide d-block text-left pl-3">
+                                    <p class="normal-p">Monday</p>
+                                    <p class=" small-p">23rd Feb 2022</p>
+
+                                    <div class="box4 box-white">
+                                        <h6>The Complete 2022 Web Development Bootcamp</h6>
+                                        <p class="small-p2 pt-3 text-black">Dr. Angela Yu</p>
+
+                                        <p class="small-p2 pt-2 text-black">23rd Feb 2022<br> 9.00am - 11.00am</p>
+                                        <button class="mt-2 ">Join</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide d-block text-left pl-3">
+                                    <p class="normal-p">Tuesday</p>
+                                    <p class=" small-p">23rd Feb 2022</p>
+
+                                    <div class="box4">
+                                        <h6 class="text-white">The Complete 2022 Web Development Bootcamp</h6>
+                                        <p class="small-p2 pt-3 ">Dr. Angela Yu</p>
+
+                                        <p class="small-p2 pt-2 ">23rd Feb 2022<br> 9.00am - 11.00am</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide d-block text-left pl-3">
+                                    <p class="normal-p">Wednesday</p>
+                                    <p class=" small-p">23rd Feb 2022</p>
+
+                                    <div class="box4">
+                                        <h6 class="text-white">The Complete 2022 Web Development Bootcamp</h6>
+                                        <p class="small-p2 pt-3 ">Dr. Angela Yu</p>
+
+                                        <p class="small-p2 pt-2 ">23rd Feb 2022<br> 9.00am - 11.00am</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide d-block text-left pl-3">
+                                    <p class="normal-p">Friday</p>
+                                    <p class=" small-p">23rd Feb 2022</p>
+
+                                    <div class="box4">
+                                        <h6 class="text-white">The Complete 2022 Web Development Bootcamp</h6>
+                                        <p class="small-p2 pt-3 ">Dr. Angela Yu</p>
+
+                                        <p class="small-p2 pt-2 ">23rd Feb 2022<br> 9.00am - 11.00am</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide d-block text-left pl-3">
+                                    <p class="normal-p">Saturday</p>
+                                    <p class=" small-p">23rd Feb 2022</p>
+
+                                    <div class="box4">
+                                        <h6 class="text-white">The Complete 2022 Web Development Bootcamp</h6>
+                                        <p class="small-p2 pt-3 ">Dr. Angela Yu</p>
+
+                                        <p class="small-p2 pt-2 ">23rd Feb 2022<br> 9.00am - 11.00am</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide d-block text-left pl-3">
+                                    <p class="normal-p">Sunday</p>
+                                    <p class=" small-p">23rd Feb 2022</p>
+
+                                    <div class="box4">
+                                        <h6 class="text-white">The Complete 2022 Web Development Bootcamp</h6>
+                                        <p class="small-p2 pt-3 ">Dr. Angela Yu</p>
+
+                                        <p class="small-p2 pt-2 ">23rd Feb 2022<br> 9.00am - 11.00am</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- form input -->
+                    <div class="box5">
+                        <h5 class="font-weight-bold">Want to learn something new?</h5>
+                        <form action="" class="position-relative pt-5">
+                            <img src="./assets/img/search.svg" alt="" class="ssk-img position-absolute">
+                            <input class="ssk-input" type="text" placeholder="Search for a Skill..."><button>Search</button>
+                        </form>
+
+                        <h6 class="pt-5">Your Skillset</h6>
+                        <ul class="nav nav-tabs nav-pills" id="myTab" role="tablist">
+                            <li class="nav-item mr-2 mt-2 pill-active" role="presentation">
+                                <a class=" active" id="design-tab" data-toggle="tab" href="#design" role="tab" aria-controls="design" aria-selected="true">Design</a>
+                            </li>
+                            <li class="nav-item mr-2 mt-2" role="presentation">
+                                <a class="" id="program-tab" data-toggle="tab" href="#program" role="tab" aria-controls="program" aria-selected="false">Programming</a>
+                            </li>
+                            <li class="nav-item mr-2 mt-2" role="presentation">
+                                <a class="" id="animation-tab" data-toggle="tab" href="#animation" role="tab" aria-controls="animation" aria-selected="false">Animation</a>
+                            </li>
+                            <li class="nav-item mr-2 mt-2" role="presentation">
+                                <a class="" id="Photography-tab" data-toggle="tab" href="#Photography" role="tab" aria-controls="Photography" aria-selected="false">Photography</a>
+                            </li>
+                            <li class="nav-item mr-2 mt-2" role="presentation">
+                                <a class="" id="Motion-tab" data-toggle="tab" href="#Motion" role="tab" aria-controls="Motion" aria-selected="false">Motion Effect</a>
+                            </li>
+                            <li class="nav-item mr-2 mt-2" role="presentation">
+                                <a class="" id="Graphic-tab" data-toggle="tab" href="#Graphic" role="tab" aria-controls="Graphic" aria-selected="false">Motion Graphics</a>
+                            </li>
+                            <li class="nav-item mr-2 mt-2" role="presentation">
+                                <a class="" id="ui/ux-tab" data-toggle="tab" href="#ui/ux" role="tab" aria-controls="ui/ux" aria-selected="false">UI/UX Design</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <h5 class="font-weight-bold mt-4">Selected skillset</h5>
+                    <div class="box6">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="design" role="tabpanel" aria-labelledby="design-tab">
+                                <div class="swipper-box-2">
+                                    <div class="swiper mySwiper">
+                                        <h5 class="prg pl-3">Design</h5>
+                                        <div class="swiper-wrapper mt-4">
+                                            <div class="swiper-slide d-block text-left pl-3">
+                                                <div class="skill-box">
+                                                    <div class="position-relative">
+                                                        <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                                        <img src="./assets/img/xd.svg" alt="">
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="p-2">
+                                                            <h6>The Full Adobe XD UI/UX Course</h6>
+                                                            <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                                            <p class="text-black pt-3" style="font-size: 14px;">Carmen Sanders</p>
+                                                            <p class="text-black boldd" style="font-size: 14px;">23rd Feb 2022</p>
+
+                                                            <div class="progress position-realtive">
+                                                                <span class="percnt">2%</span>
+                                                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+
+                                                        </div>
+                                                        <button type="submit">Subscribed</button>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide d-block text-left pl-3">
+                                                <div class="skill-box">
+                                                    <div class="position-relative">
+                                                        <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                                        <img src="./assets/img/xd.svg" alt="">
+                                                    </div>
+                                                    <div class="p-2">
+                                                        <h6>The Full Adobe XD UI/UX Course</h6>
+                                                        <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                                        <p class="text-black pt-3" style="font-size: 14px;">Carmen Sanders</p>
+                                                        <p class="text-black boldd" style="font-size: 14px;">23rd Feb 2022</p>
+
+                                                        <div class="progress position-realtive">
+                                                            <span class="percnt">2%</span>
+                                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <button>Subscribed</button>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide d-block text-left pl-3">
+                                                <div class="skill-box">
+                                                    <div class="position-relative">
+                                                        <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                                        <img src="./assets/img/xd.svg" alt="">
+                                                    </div>
+                                                    <div class="p-2">
+                                                        <h6>The Full Adobe XD UI/UX Course</h6>
+                                                        <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                                        <p class="text-black pt-3" style="font-size: 14px;">Carmen Sanders</p>
+                                                        <p class="text-black boldd" style="font-size: 14px;">23rd Feb 2022</p>
+
+                                                        <div class="progress position-realtive">
+                                                            <span class="percnt">2%</span>
+                                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <button>Subscribed</button>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide d-block text-left pl-3">
+                                                <div class="skill-box">
+                                                    <div class="position-relative">
+                                                        <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                                        <img src="./assets/img/xd.svg" alt="">
+                                                    </div>
+                                                    <div class="p-2">
+                                                        <h6>The Full Adobe XD UI/UX Course</h6>
+                                                        <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                                        <p class="text-black pt-3" style="font-size: 14px;">Carmen Sanders</p>
+                                                        <p class="text-black boldd" style="font-size: 14px;">23rd Feb 2022</p>
+
+                                                        <div class="progress position-realtive">
+                                                            <span class="percnt">2%</span>
+                                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <button>Subscribed</button>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide d-block text-left pl-3">
+                                                <div class="skill-box">
+                                                    <div class="position-relative">
+                                                        <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                                        <img src="./assets/img/xd.svg" alt="">
+                                                    </div>
+                                                    <div class="p-2">
+                                                        <h6>The Full Adobe XD UI/UX Course</h6>
+                                                        <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                                        <p class="text-black pt-3" style="font-size: 14px;">Carmen Sanders</p>
+                                                        <p class="text-black boldd" style="font-size: 14px;">23rd Feb 2022</p>
+
+                                                        <div class="progress position-realtive">
+                                                            <span class="percnt">2%</span>
+                                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <button>Subscribed</button>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide d-block text-left pl-3">
+                                                <div class="skill-box">
+                                                    <div class="position-relative">
+                                                        <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                                        <img src="./assets/img/xd.svg" alt="">
+                                                    </div>
+                                                    <div class="p-2">
+                                                        <h6>The Full Adobe XD UI/UX Course</h6>
+                                                        <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                                        <p class="text-black pt-3" style="font-size: 14px;">Carmen Sanders</p>
+                                                        <p class="text-black boldd" style="font-size: 14px;">23rd Feb 2022</p>
+
+                                                        <div class="progress position-realtive">
+                                                            <span class="percnt">2%</span>
+                                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <button>Subscribed</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="program" role="tabpanel" aria-labelledby="program-tab">
+                                <div class="swipper-box-2">
+                                    <div class="swiper mySwiper">
+                                        <h5 class="prg pl-3">Programming</h5>
+                                        <div class="swiper-wrapper mt-4">
+                                            <div class="swiper-slide d-block text-left pl-3">
+                                                <div class="skill-box">
+                                                    <div class="position-relative">
+                                                        <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                                        <img src="./assets/img/react.png" alt="">
+                                                    </div>
+                                                    <div class="p-2">
+                                                        <h6>The Full Adobe XD UI/UX Course</h6>
+                                                        <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                                        <p class="text-black pt-3" style="font-size: 14px;">Carmen Sanders</p>
+                                                        <p class="text-black boldd" style="font-size: 14px;">23rd Feb 2022</p>
+
+                                                        <div class="progress position-realtive">
+                                                            <span class="percnt">2%</span>
+                                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <button>Subscribed</button>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide d-block text-left pl-3">
+                                                <div class="skill-box">
+                                                    <div class="position-relative">
+                                                        <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                                        <img src="./assets/img/react.png" alt="">
+                                                    </div>
+                                                    <div class="p-2">
+                                                        <h6>The Full Adobe XD UI/UX Course</h6>
+                                                        <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                                        <p class="text-black pt-3" style="font-size: 14px;">Carmen Sanders</p>
+                                                        <p class="text-black boldd" style="font-size: 14px;">23rd Feb 2022</p>
+
+                                                        <div class="progress position-realtive">
+                                                            <span class="percnt">2%</span>
+                                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <button>Subscribed</button>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide d-block text-left pl-3">
+                                                <div class="skill-box">
+                                                    <div class="position-relative">
+                                                        <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                                        <img src="./assets/img/react.png" alt="">
+                                                    </div>
+                                                    <div class="p-2">
+                                                        <h6>The Full Adobe XD UI/UX Course</h6>
+                                                        <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                                        <p class="text-black pt-3" style="font-size: 14px;">Carmen Sanders</p>
+                                                        <p class="text-black boldd" style="font-size: 14px;">23rd Feb 2022</p>
+
+                                                        <div class="progress position-realtive">
+                                                            <span class="percnt">2%</span>
+                                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <button>Subscribed</button>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide d-block text-left pl-3">
+                                                <div class="skill-box">
+                                                    <div class="position-relative">
+                                                        <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                                        <img src="./assets/img/react.png" alt="">
+                                                    </div>
+                                                    <div class="p-2">
+                                                        <h6>The Full Adobe XD UI/UX Course</h6>
+                                                        <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                                        <p class="text-black pt-3" style="font-size: 14px;">Carmen Sanders</p>
+                                                        <p class="text-black boldd" style="font-size: 14px;">23rd Feb 2022</p>
+
+                                                        <div class="progress position-realtive">
+                                                            <span class="percnt">2%</span>
+                                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <button>Subscribed</button>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide d-block text-left pl-3">
+                                                <div class="skill-box">
+                                                    <div class="position-relative">
+                                                        <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                                        <img src="./assets/img/react.png" alt="">
+                                                    </div>
+                                                    <div class="p-2">
+                                                        <h6>The Full Adobe XD UI/UX Course</h6>
+                                                        <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                                        <p class="text-black pt-3" style="font-size: 14px;">Carmen Sanders</p>
+                                                        <p class="text-black boldd" style="font-size: 14px;">23rd Feb 2022</p>
+
+                                                        <div class="progress position-realtive">
+                                                            <span class="percnt">2%</span>
+                                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <button>Subscribed</button>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide d-block text-left pl-3">
+                                                <div class="skill-box">
+                                                    <div class="position-relative">
+                                                        <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                                        <img src="./assets/img/react.png" alt="">
+                                                    </div>
+                                                    <div class="p-2">
+                                                        <h6>The Full Adobe XD UI/UX Course</h6>
+                                                        <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                                        <p class="text-black pt-3" style="font-size: 14px;">Carmen Sanders</p>
+                                                        <p class="text-black boldd" style="font-size: 14px;">23rd Feb 2022</p>
+
+                                                        <div class="progress position-realtive">
+                                                            <span class="percnt">2%</span>
+                                                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <button>Subscribed</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swipper-box-2">
+                            <div class="swiper mySwiper">
+                                <h5 class="prg pl-3">Programming</h5>
+                                <div class="swiper-wrapper mt-4">
+                                    <div class="swiper-slide d-block text-left pl-3">
+                                        <div class="skill-box">
+                                            <div class="position-relative">
+                                                <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                                <img src="./assets/img/react.png" alt="">
+                                            </div>
+                                            <div class="p-2">
+                                                <h6>The Full Adobe XD UI/UX Course</h6>
+                                                <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                                <p class="text-black pt-3" style="font-size: 14px;">Carmen Sanders</p>
+                                                <p class="text-black boldd" style="font-size: 14px;">23rd Feb 2022</p>
+
+                                                <div class="progress position-realtive">
+                                                    <span class="percnt">2%</span>
+                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+
+
+                                            </div>
+                                            <button>Subscribed</button>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide d-block text-left pl-3">
+                                        <div class="skill-box">
+                                            <div class="position-relative">
+                                                <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                                <img src="./assets/img/react.png" alt="">
+                                            </div>
+                                            <div class="p-2">
+                                                <h6>The Full Adobe XD UI/UX Course</h6>
+                                                <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                                <p class="text-black pt-3" style="font-size: 14px;">Carmen Sanders</p>
+                                                <p class="text-black boldd" style="font-size: 14px;">23rd Feb 2022</p>
+
+                                                <div class="progress position-realtive">
+                                                    <span class="percnt">2%</span>
+                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+
+
+                                            </div>
+                                            <button>Subscribed</button>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide d-block text-left pl-3">
+                                        <div class="skill-box">
+                                            <div class="position-relative">
+                                                <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                                <img src="./assets/img/react.png" alt="">
+                                            </div>
+                                            <div class="p-2">
+                                                <h6>The Full Adobe XD UI/UX Course</h6>
+                                                <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                                <p class="text-black pt-3" style="font-size: 14px;">Carmen Sanders</p>
+                                                <p class="text-black boldd" style="font-size: 14px;">23rd Feb 2022</p>
+
+                                                <div class="progress position-realtive">
+                                                    <span class="percnt">2%</span>
+                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+
+
+                                            </div>
+                                            <button>Subscribed</button>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide d-block text-left pl-3">
+                                        <div class="skill-box">
+                                            <div class="position-relative">
+                                                <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                                <img src="./assets/img/react.png" alt="">
+                                            </div>
+                                            <div class="p-2">
+                                                <h6>The Full Adobe XD UI/UX Course</h6>
+                                                <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                                <p class="text-black pt-3" style="font-size: 14px;">Carmen Sanders</p>
+                                                <p class="text-black boldd" style="font-size: 14px;">23rd Feb 2022</p>
+
+                                                <div class="progress position-realtive">
+                                                    <span class="percnt">2%</span>
+                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+
+
+                                            </div>
+                                            <button>Subscribed</button>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide d-block text-left pl-3">
+                                        <div class="skill-box">
+                                            <div class="position-relative">
+                                                <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                                <img src="./assets/img/react.png" alt="">
+                                            </div>
+                                            <div class="p-2">
+                                                <h6>The Full Adobe XD UI/UX Course</h6>
+                                                <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                                <p class="text-black pt-3" style="font-size: 14px;">Carmen Sanders</p>
+                                                <p class="text-black boldd" style="font-size: 14px;">23rd Feb 2022</p>
+
+                                                <div class="progress position-realtive">
+                                                    <span class="percnt">2%</span>
+                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+
+
+                                            </div>
+                                            <button>Subscribed</button>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide d-block text-left pl-3">
+                                        <div class="skill-box">
+                                            <div class="position-relative">
+                                                <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                                <img src="./assets/img/react.png" alt="">
+                                            </div>
+                                            <div class="p-2">
+                                                <h6>The Full Adobe XD UI/UX Course</h6>
+                                                <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                                <p class="text-black pt-3" style="font-size: 14px;">Carmen Sanders</p>
+                                                <p class="text-black boldd" style="font-size: 14px;">23rd Feb 2022</p>
+
+                                                <div class="progress position-realtive">
+                                                    <span class="percnt">2%</span>
+                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+
+
+                                            </div>
+                                            <button>Subscribed</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- right Side -->
+                <div class="col-xl-4 mt-3">
+                    <div class="box7">
+                        <h5 class="">Activity</h5>
+                        <div class="sub-box position-relative">
+                            <img src="./assets/img/corner-start.svg" alt="" class="cornor-star">
+                            <h4>Congratulations!</h4>
+                            <p class="small-p">
+                                You've been on a learning streak for 5 days! Keep it up!
+                            </p>
+                        </div>
+                        <div class="position-relative text-center">
+                            <ul class="chart mt-3 pl-0">
+                                <li class="text-center pr-2">
+                                    <span class="small-hr d-block text-center">3HR</span>
+                                    <div class="tube-1 text-center">
+
+                                    </div>
+
+                                </li>
+                                <li class="text-center pr-2">
+                                    <span class="small-hr d-block text-center">3HR</span>
+                                    <div class="tube-2 text-center">
+
+                                    </div>
+                                </li>
+                                <li class="text-center pr-2">
+                                    <span class="small-hr d-block text-center">3HR</span>
+                                    <div class="tube-3 text-center">
+
+                                    </div>
+                                </li>
+                                <li class="text-center pr-2">
+                                    <span class="small-hr d-block text-center">3HR</span>
+                                    <div class="tube-4 text-center">
+
+                                    </div>
+                                </li>
+                                <li class="text-center pr-2">
+                                    <span class="small-hr d-block text-center">3HR</span>
+                                    <div class="tube-5 text-center">
+
+                                    </div>
+                                </li>
+                                <li class="text-center pr-2">
+                                    <span class="small-hr d-block text-center">3HR</span>
+                                    <div class="tube-6 text-center">
+
+                                    </div>
+                                </li>
+                                <li class="text-center pr-2">
+                                    <span class="small-hr d-block text-center">3HR</span>
+                                    <div class="tube-7 text-center">
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="box8 mt-3">
+                        <h5 class="">Community</h5>
+                        <div class="row">
+                            <div class="col-lg-6 text-center">
+                                <div class="sub-box mt-3">
+                                    <img src="./assets/img/star-2.svg" alt="" width="30px">
+                                    <h5 class="pt-3 font-weight-bold" ">20</h5>
+                                    <h6>Courses<br> completed</h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 text-center ">
+                                <div class="sub-box mt-3 ">
+                                    <img src="./assets/img/star-2.svg " alt=" " width="30px ">
+                                    <h5 class="pt-3 font-weight-bold ">20</h5>
+                                    <h6>Courses in<br> progress</h6>
+                                </div>
+                            </div>
+
+                        </div>
+                        <h6 class="mt-4 ">Design Skillset</h6>
+                        <span class="d-flex mt-4 " style="font-size: 14px; ">You 
+                            <div class="bar pl-2 pr-1 ">
+                                <div class="progress ">
+                                    
+                                    <div class="progress-bar progress-bar-striped " role="progressbar " style="width: 30% " aria-valuenow="10 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                </div>
+                            </div>
+                            <strong class="pr-2 "> 15</strong>       Courses
+                        </span>
+                        <span class="d-flex mt-4 " style="font-size: 14px; ">Others 
+                            <div class="bar pl-2 pr-1 ">
+                                <div class="progress ">
+                                    
+                                    <div class="progress-bar2 progress-bar-striped " role="progressbar " style="width: 30% " aria-valuenow="10 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                </div>
+                            </div>
+                            <strong class="pr-2 "> 10</strong>       Courses
+                        </span>
+                        <div class="sub-box mt-5 p-3 ">
+                            <h6>You have completed more courses than 80% of the whole community.</h6>
+                        </div>
+                        <h6 class="mt-4 ">Programming Skillset</h6>
+                        <span class="d-flex mt-4 " style="font-size: 14px; ">You 
+                            <div class="bar pl-2 pr-1 ">
+                                <div class="progress ">
+                                    
+                                    <div class="progress-bar progress-bar-striped " role="progressbar " style="width: 30% " aria-valuenow="10 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                </div>
+                            </div>
+                            <strong class="pr-2 "> 15</strong>       Courses
+                        </span>
+                        <span class="d-flex mt-4 " style="font-size: 14px; ">Others 
+                            <div class="bar pl-2 pr-1 ">
+                                <div class="progress ">
+                                    
+                                    <div class="progress-bar2 progress-bar-striped " role="progressbar " style="width: 30% " aria-valuenow="10 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                </div>
+                            </div>
+                            <strong class="pr-2 "> 10</strong>       Courses
+                        </span>
+                        <div class="sub-box mt-5 p-3 pt-4 ">
+                            <h6>You have completed more courses than 80% of the whole community.</h6>
+                        </div>
+                    </div>
+                    <div class="box8 mt-3 ">
+                        <h5 class=" ">Industry</h5>
+                        <button class="lit-btn mr-1 ">Design</button> <button class="lit-btn ">Programming</button>
+                        <h3 class="font-weight-bold mt-4 ">156</h3>
+                        <h6 class="pt-2 ">You have completed more courses than 80% of the whole community.</h6>
+                        <div class="divider mt-4 "></div>
+                        <h3 class="font-weight-bold mt-4 ">80%</h3>
+                        <h6 class="pt-2 ">You have completed more courses than 80% of the whole community.</h6>
+                        <div class="divider mt-4 "></div>
+                        <h3 class="font-weight-bold mt-4 ">RM90,000</h3>
+                        <h6 class="pt-2 ">You have completed more courses than 80% of the whole community.</h6>
+                        <div class="divider mt-4 "></div>
+                        <h3 class="font-weight-bold mt-4 ">4 Months</h3>
+                        <h6 class="pt-2 ">Average learning period</h6>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js " integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ " crossorigin="anonymous "></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js " integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm " crossorigin="anonymous "></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js "></script>
+
+    <script type="text/javascript ">
+        $(document).ready(function() {
+            $("#sidebar ").mCustomScrollbar({
+                theme: "minimal "
+            });
+
+            $('.sidebarCollapse').on('click', function() {
+                $('#sidebar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+        // swipper js
+        var swiper = new Swiper(".mySwiper ", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination ",
+                clickable: true,
+            },
+             breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 2.7,
+            spaceBetween: 20,
+          },
+        },
+        });
+    </script>
+
+</body>
+
+</html>

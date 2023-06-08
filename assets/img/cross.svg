@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+  <g id="Group_27727" data-name="Group 27727" transform="translate(18379 11765)">
+    <circle id="Ellipse_1379" data-name="Ellipse 1379" cx="7" cy="7" r="7" transform="translate(-18379 -11765)" fill="#171717"/>
+    <g id="Close_Icon" data-name="Close Icon" transform="translate(-18375 -11761)">
+      <path id="Close_Icon-2" data-name="Close Icon" d="M-65.2,243.142a.837.837,0,0,1-.091,1.176.824.824,0,0,1-1.077,0l-1.591-1.593-1.591,1.593a.824.824,0,0,1-1.168-.092.839.839,0,0,1,0-1.084l1.582-1.6-1.582-1.6a.86.86,0,0,1-.24-.584.865.865,0,0,1,.24-.592.821.821,0,0,1,1.168,0l1.591,1.593,1.591-1.593a.848.848,0,0,1,.58-.242.817.817,0,0,1,.588.242.835.835,0,0,1,0,1.176l-1.582,1.6Z" transform="translate(70.96 -238.518)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-width="1" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>

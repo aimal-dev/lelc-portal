@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/responsive.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <!-- swiper js -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<style>
+    label {
+        font-weight: 500;
+        font-size: 14px;
+    }
+    
+    .box14 h6 {
+        padding-top: 7px;
+    }
+</style>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header text-center">
+                <a href="#!">
+                    <img src="./assets/img/Logo.png" alt="">
+                </a>
+            </div>
+
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#!"><img src="./assets/img/overview.svg" alt=""> Overview</a>
+
+                </li>
+                <li>
+                    <a href="#"><img src="./assets/img/progress.svg" alt=""> In Progress</a>
+                </li>
+                <li>
+                    <a href="#!"><img src="./assets/img/skill.svg" alt=""> Skillset</a>
+
+                </li>
+                <li>
+                    <a href="#"><img src="./assets/img/fav.svg" alt=""> Favorite</a>
+                </li>
+                <li>
+                    <a href="#"><img src="./assets/img/logout.svg" alt=""> Logout</a>
+                </li>
+                <li>
+                    <a type="button" id="" class="btn btn-info sidebarCollapse toggle-class text-white mt-5">
+                       Toggle
+                        
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="sidebarCollapse">
+                        <i class="fas fa-align-left"></i>
+                        
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav mr-auto">
+                            <li class="ml-3 position-relative">
+                                <form action="">
+                                    <img class="position-absolute" src="./assets/img/search.svg" alt="" style="top: 9px; left: 13px;">
+                                    <input class="user-search" type="search" placeholder="Search">
+                                </form>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="mr-4 pr-2 mt-3">
+                                <div class="dropdown user">
+                                    <a class="position-relative" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                        <img class="user-img" src="./assets/img/notification.svg" alt="" width="25px">
+                                        <span class="not-up"><sup>3</sup></span>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="">
+                                <div class="dropdown user">
+                                    <a class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                        <img class="user-img" src="./assets/img/pages-img/Pic.png" alt="" width="100%">
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <section class="main mb-3">
+                <div class="row no-gutters">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <h6 class="start-head"><i class="fa fa-angle-left font-weight-light"></i> back</h6>
+                        <h5 class="font-weight-bold">The Full Adobe XD UI/UX Course</h5>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12 text-md-right text-center mt-md-0 mt-3">
+                        <button type="button" class="dark mr-1 pl-4 pr-4" data-toggle="modal" data-target="#exampleModal">Subscribe</button>
+                        <!-- Modal -->
+                        <div class="modal fade modal-1" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content container">
+                                    <div class="row">
+                                        <div class="col-12 text-right">
+                                            <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <div class="col-12 text-center pt-4">
+                                            <h5 class="font-weight-bold text-center">Subscribe this course</h5>
+                                            <div class="box13 p-4 mt-4">
+                                                <img src="./assets/img/subscribe.svg" alt="">
+                                                <h6 class="pt-3">The Full Adobe XD UI/UX Course</h6>
+                                                <p>Physical Class<br> Monday, 9:00 AM - 12:00 PM
+                                                </p>
+                                                <div class="divider"></div>
+                                                <p class="pt-3">
+                                                    Course Price
+                                                </p>
+                                                <h4 class="font-weight-bold">RM150.00</h4>
+                                            </div>
+                                            <h6 class="">Payment Method</h6>
+                                            <form action="" class=" pr-3">
+                                                <div class="row mt-5">
+                                                    <div class="col-8 ">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                        <label class="form-check-label" for="exampleRadios1">
+                                                            Pay using Credit/Debit Card
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-4 text-right">
+                                                        <img class="text-right" src="./assets/img/payment.svg" alt="" width="100px">
+                                                    </div>
+                                                </div>
+                                                <div class="divider mt-4 mb-4"></div>
+                                                <div class="row ">
+                                                    <div class="col-8 pl-5">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                        <label class="form-check-label" for="exampleRadios1">
+                                                           Pay using Online Banking Transfer
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-4 text-right">
+                                                        <img class="text-right" src="./assets/img/payment.svg" alt="" width="100px">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="row p-3">
+                                                <div class="col-12 mt-3">
+                                                    <div class="box14 p-0">
+                                                        <div class="row">
+                                                            <div class="col-3">
+                                                                <img src="./assets/img/visa.svg" alt="" width="100px">
+                                                            </div>
+                                                            <div class="col-4 pt-4">
+                                                                <h6 class="">Ending 8845</h6>
+                                                            </div>
+                                                            <div class="col-5 pt-4 d-flex">
+                                                                <h6 class="pr-3">Expiry 01/23</h6>
+                                                                <input type="radio" class="mt-3" style="margin-top: -30px !important;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box14 p-0 mt-3">
+                                                        <div class="row">
+                                                            <div class="col-3">
+                                                                <img src="./assets/img/visa.svg" alt="" width="100px">
+                                                            </div>
+                                                            <div class="col-4 pt-4">
+                                                                <h6 class="">Ending 8845</h6>
+                                                            </div>
+                                                            <div class="col-5 pt-4 d-flex">
+                                                                <h6 class="pr-3">Expiry 01/23</h6>
+                                                                <input type="radio" class="mt-3" style="margin-top: -30px !important;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box15 mt-3 pt-3">
+                                                        <h6>Use other card</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mt-3">
+                                                    <p class="text-left lelc">
+                                                        LELC is required by law to collect applicable transaction taxes for purchases made in certain tax jurisdictions.
+                                                    </p>
+                                                    <p class="text-left lelc">
+                                                        By completing your purchases you agree to these Terms of Service.
+                                                    </p>
+
+                                                </div>
+                                                <div class="col-12 mt-3">
+                                                    <button class="dark" style="width: 100%;">Proceed with Payment</button>
+                                                </div>
+                                            </div>
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- leftbar -->
+                    <div class="col-xl-8 pr-xl-3">
+
+                        <img class="pt-4" src="./assets/img/subscribe.svg" alt="" width="100%">
+                        <div class="row mt-3">
+                            <div class="col-3">
+                                <img src="./assets/img/comp.svg" alt="" width="100%">
+                            </div>
+                            <div class="col-3">
+                                <img src="./assets/img/comp.svg" alt="" width="100%">
+
+                            </div>
+                            <div class="col-3">
+                                <img src="./assets/img/comp.svg" alt="" width="100%">
+
+                            </div>
+                            <div class="col-3">
+                                <img src="./assets/img/comp.svg" alt="" width="100%">
+
+                            </div>
+                        </div>
+                        <h5 class="mt-4">Overview</h5>
+                        <h6 class="pt-3">About the course</h6>
+                        <p class="normal-p pt-3">
+                            “DATA” has many definitions, the context of which can change according to functional uses. This is a basic programme providing fundamentals of data analysis at the end of which you will be able to read data from sources like CSV, BigQuery, SQL, and how
+                            to use libraries like NumPy and Pandas, and visualize data.
+                        </p>
+                        <h5 class="mt-4">What you’ll learn</h5>
+                        <h6 class="pt-3">Introduction to Web Development</h6>
+                        <p class="normal-p pt-3">
+                            “DATA” has many definitions, the context of which can change according to functional uses. This is a basic programme providing fundamentals of data analysis at the end of which you will be able to read data from sources like CSV, BigQuery, SQL, and how
+                            to use libraries like NumPy and Pandas, and visualize data.
+                        </p>
+                        <h6 class="pt-3">Background Web</h6>
+                        <p class="normal-p pt-3">
+                            “DATA” has many definitions, the context of which can change according to functional uses. This is a basic programme providing fundamentals of data analysis at the end of which you will be able to read data from sources like CSV, BigQuery, SQL, and how
+                            to use libraries like NumPy and Pandas, and visualize data.
+                        </p>
+                        <h6 class="pt-3">Lorem Ipsum Web</h6>
+                        <p class="normal-p pt-3">
+                            “DATA” has many definitions, the context of which can change according to functional uses. This is a basic programme providing fundamentals of data analysis at the end of which you will be able to read data from sources like CSV, BigQuery, SQL, and how
+                            to use libraries like NumPy and Pandas, and visualize data.
+                        </p>
+                        <h6 class="pt-3">Lorem Ipsum Web</h6>
+                        <p class="normal-p pt-3">
+                            “DATA” has many definitions, the context of which can change according to functional uses. This is a basic programme providing fundamentals of data analysis at the end of which you will be able to read data from sources like CSV, BigQuery, SQL, and how
+                            to use libraries like NumPy and Pandas, and visualize data.
+                        </p>
+                        <h6 class="pt-3">Lorem Ipsum Web</h6>
+                        <p class="normal-p pt-3">
+                            “DATA” has many definitions, the context of which can change according to functional uses. This is a basic programme providing fundamentals of data analysis at the end of which you will be able to read data from sources like CSV, BigQuery, SQL, and how
+                            to use libraries like NumPy and Pandas, and visualize data.
+                        </p>
+
+                    </div>
+                    <!-- rightbar -->
+                    <div class="col-xl-4 pt-4">
+                        <div class="box9">
+                            <h5 class="light-gray">Class Type</h5>
+                            <h4>Online Class</h4>
+                            <h5 class="light-gray mt-4">Trainer, LELC</h5>
+                            <h6>Patrick McDonald</h6>
+                            <h5 class="light-gray mt-4">Course Duration</h5>
+                            <h6>1 Day Class</h6>
+                            <h5 class="light-gray mt-4">Class Schedule</h5>
+                            <h6>Monday, 9:00 AM - 12:00 AM</h6>
+                            <h5 class="light-gray mt-4">Price</h5>
+                            <h4>RM150.00</h4>
+                            <h5 class="light-gray mt-4">Course Rating</h5>
+                            <span class="d-flex"><img class='pr-2' src="./assets/img/stars.svg" alt="" width="100px"> 2,345 review</span>
+                            <h5 class="light-gray mt-4">Course Rating</h5>
+                            <button class="dark pl-4 pr-4 mt-3">Design</button>
+
+                        </div>
+                        <div class="box10 mt-4">
+                            <div class="row no-gutters mt-4">
+                                <div class="col-3">
+                                    <div class="round-circle">
+                                        <img src="./assets/img/cert.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <div class="cont-text">
+                                        <h5>Digital Certificate</h5>
+                                        <p>Earn certificate after complete the course journey</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters mt-4">
+                                <div class="col-3">
+                                    <div class="round-circle">
+                                        <img src="./assets/img/cert.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <div class="cont-text">
+                                        <h5>Digital Certificate</h5>
+                                        <p>Earn certificate after complete the course journey</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters mt-4">
+                                <div class="col-3">
+                                    <div class="round-circle">
+                                        <img src="./assets/img/cert.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <div class="cont-text">
+                                        <h5>Digital Certificate</h5>
+                                        <p>Earn certificate after complete the course journey</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters mt-4">
+                                <div class="col-3">
+                                    <div class="round-circle">
+                                        <img src="./assets/img/cert.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <div class="cont-text">
+                                        <h5>Digital Certificate</h5>
+                                        <p>Earn certificate after complete the course journey</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box11 mt-3 pt-5">
+                            <h5>Requirements</h5>
+                            <div class="row no-gutters mt-5">
+                                <div class="col-3">
+                                    <div class="round-circle2 pt-3">
+                                        <img src="./assets/img/lap.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-9 pt-2">
+                                    <h6>Basic knowledge in HTML & CSS</h6>
+                                </div>
+                            </div>
+                            <div class="row no-gutters mt-5">
+                                <div class="col-3">
+                                    <div class="round-circle2 pt-3">
+                                        <img src="./assets/img/lap.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-9 pt-2">
+                                    <h6>Basic knowledge in HTML & CSS</h6>
+                                </div>
+                            </div>
+                            <div class="row no-gutters mt-5">
+                                <div class="col-3">
+                                    <div class="round-circle2 pt-3">
+                                        <img src="./assets/img/lap.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-9 pt-2">
+                                    <h6>Basic knowledge in HTML & CSS</h6>
+                                </div>
+                            </div>
+                            <div class="row no-gutters mt-5">
+                                <div class="col-3">
+                                    <div class="round-circle2 pt-3">
+                                        <img src="./assets/img/lap.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-9 pt-2">
+                                    <h6>Basic knowledge in HTML & CSS</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Whole Section -->
+            <section class="review-sec mb-3">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="mt-2">Review</h5>
+                        <h6 class="pt-3">Rate based on previous classes</h6>
+                    </div>
+                    <div class="col-xl-4 col-md-6 mt-3">
+                        <div class="box11 text-center p-3 pt-4">
+                            <h5>Overall rating</h5>
+                            <span class="d-flex justify-content-center pt-2 font-weight-bold"><h2>5.0</h2><sub>/5.0</sub></span>
+                            <img src="./assets/img/stars.svg" alt="">
+                            <p class="pt-1">Based on 2,345 review</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 mt-3">
+                        <div class="box11 text-center p-3 pt-4">
+                            <h5>Overall rating</h5>
+                            <span class="d-flex justify-content-center pt-2 font-weight-bold"><h2>5.0</h2><sub>/5.0</sub></span>
+                            <img src="./assets/img/stars.svg" alt="">
+                            <p class="pt-1">Based on 2,345 review</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 mt-3">
+                        <div class="box11 text-center p-3 pt-4">
+                            <h5>Overall rating</h5>
+                            <span class="d-flex justify-content-center pt-2 font-weight-bold"><h2>5.0</h2><sub>/5.0</sub></span>
+                            <img src="./assets/img/stars.svg" alt="">
+                            <p class="pt-1">Based on 2,345 review</p>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <h6 class="pt-4">Student’s reviews</h6>
+                        <div class="box11 p-4 pr-0 mt-4">
+                            <div class="row">
+                                <div class="col-xl-1 col-lg-2 col-md-2 col-12">
+                                    <img src="./assets/img/pages-img/Pic.png" alt="">
+                                </div>
+                                <div class="col-xl-11 col-lg-10 col-md-10 col-12 ">
+                                    <h6>Muhammad Arif bin Abdul Rahman</h6>
+                                    <p class="re-p ">36 classes subscribed</p>
+                                    <img src="./assets/img/stars.svg " alt=" ">
+                                    <p class="re-p2 pt-2 ">
+                                        Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero, vel malesuada velit. Nullam et maximus lorem. Suspendisse maximus dolor quis consequat volutpat. Donec vehicula elit eu erat pulvinar, vel congue ex egestas. Praesent egestas
+                                        purus dolor, a porta arcu pharetra quis. Sed vestibulum semper ligula, id accumsan orci ornare ut. Donec id pharetra nunc, ut sollicitudin mi. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                                        fames ac turpis egestas. Aliquam dapibus nisl at diam scelerisque luctus. Nam mattis, velit in malesuada maximus, erat ligula eleifend eros, et lacinia nunc ante vel odio.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box11 p-4 pr-0 mt-4">
+                            <div class="row">
+                                <div class="col-xl-1 col-lg-2 col-md-2 col-12">
+                                    <img src="./assets/img/pages-img/Pic.png" alt="">
+                                </div>
+                                <div class="col-xl-11 col-lg-10 col-md-10 col-12 ">
+                                    <h6>Muhammad Arif bin Abdul Rahman</h6>
+                                    <p class="re-p ">36 classes subscribed</p>
+                                    <img src="./assets/img/stars.svg " alt=" ">
+                                    <p class="re-p2 pt-2 ">
+                                        Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero, vel malesuada velit. Nullam et maximus lorem. Suspendisse maximus dolor quis consequat volutpat. Donec vehicula elit eu erat pulvinar, vel congue ex egestas. Praesent egestas
+                                        purus dolor, a porta arcu pharetra quis. Sed vestibulum semper ligula, id accumsan orci ornare ut. Donec id pharetra nunc, ut sollicitudin mi. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                                        fames ac turpis egestas. Aliquam dapibus nisl at diam scelerisque luctus. Nam mattis, velit in malesuada maximus, erat ligula eleifend eros, et lacinia nunc ante vel odio.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box11 p-4 pr-0 mt-4">
+                            <div class="row">
+                                <div class="col-xl-1 col-lg-2 col-md-2 col-12">
+                                    <img src="./assets/img/pages-img/Pic.png" alt="">
+                                </div>
+                                <div class="col-xl-11 col-lg-10 col-md-10 col-12 ">
+                                    <h6>Muhammad Arif bin Abdul Rahman</h6>
+                                    <p class="re-p ">36 classes subscribed</p>
+                                    <img src="./assets/img/stars.svg " alt=" ">
+                                    <p class="re-p2 pt-2 ">
+                                        Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero, vel malesuada velit. Nullam et maximus lorem. Suspendisse maximus dolor quis consequat volutpat. Donec vehicula elit eu erat pulvinar, vel congue ex egestas. Praesent egestas
+                                        purus dolor, a porta arcu pharetra quis. Sed vestibulum semper ligula, id accumsan orci ornare ut. Donec id pharetra nunc, ut sollicitudin mi. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                                        fames ac turpis egestas. Aliquam dapibus nisl at diam scelerisque luctus. Nam mattis, velit in malesuada maximus, erat ligula eleifend eros, et lacinia nunc ante vel odio.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section class="review-sec">
+                <div class="row ">
+                    <div class="col-12 mb-3">
+                        <h5 class="mt-2">Some related course</h5>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mt-xl-0 mt-lg-0 mt-3">
+                        <div class="skill-box pb-3">
+                            <div class="position-relative">
+                                <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                <img src="./assets/img/ad.svg" alt="" width="100%">
+                            </div>
+                            <div class="p-2">
+                                <h6>The Complete 2022 Web Development Bootcamp</h6>
+                                <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                <p class="text-black pt-2" style="font-size: 14px;">Carmen Sanders</p>
+                                <p class="text-black boldd" style="font-size: 14px;"> <img src="./assets/img/tick.svg" alt=""> Lifetime Access</p>
+
+
+                            </div>
+                            <button class="lit-btn ml-2" style="background: #EBEBEB; border: none; outline: none;">RM150.00</button>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mt-xl-0 mt-lg-0 mt-3">
+                        <div class="skill-box pb-3">
+                            <div class="position-relative">
+                                <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                <img src="./assets/img/ad.svg" alt="" width="100%">
+                            </div>
+                            <div class="p-2">
+                                <h6>The Complete 2022 Web Development Bootcamp</h6>
+                                <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                <p class="text-black pt-2" style="font-size: 14px;">Carmen Sanders</p>
+                                <p class="text-black boldd" style="font-size: 14px;"> <img src="./assets/img/tick.svg" alt=""> Lifetime Access</p>
+
+
+                            </div>
+                            <button class="lit-btn ml-2" style="background: #EBEBEB;border: none; outline: none;">RM150.00</button>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mt-xl-0 mt-lg-0 mt-3">
+                        <div class="skill-box pb-3">
+                            <div class="position-relative">
+                                <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                <img src="./assets/img/ad.svg" alt="" width="100%">
+                            </div>
+                            <div class="p-2">
+                                <h6>The Complete 2022 Web Development Bootcamp</h6>
+                                <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                <p class="text-black pt-2" style="font-size: 14px;">Carmen Sanders</p>
+                                <p class="text-black boldd" style="font-size: 14px;">
+                                    <img src="./assets/img/tick.svg" alt=""> Lifetime Access</p>
+
+
+                            </div>
+                            <button class="lit-btn ml-2" style="background: #EBEBEB;border: none; outline: none;">RM150.00</button>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mt-xl-0 mt-lg-0 mt-3">
+                        <div class="skill-box pb-3">
+                            <div class="position-relative">
+                                <img class="position-absolute heart" src="./assets/img/heart-2.svg" alt="" width="100px">
+                                <img src="./assets/img/ad.svg" alt="" width="100%">
+                            </div>
+                            <div class="p-2">
+                                <h6>The Complete 2022 Web Development Bootcamp</h6>
+                                <span class="d-flex mt-3" style="font-size: 13px;"> <img src="./assets/img/stars.svg" class="pr-2" alt="" style="width:100px;">    1,816 review</span>
+                                <p class="text-black pt-2" style="font-size: 14px;">Carmen Sanders</p>
+                                <p class="text-black boldd" style="font-size: 14px;"> <img src="./assets/img/tick.svg" alt=""> Lifetime Access</p>
+
+
+                            </div>
+                            <button class="lit-btn ml-2" style="background: #EBEBEB;border: none; outline: none;">RM150.00</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js " integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ " crossorigin="anonymous "></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js " integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm " crossorigin="anonymous "></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js "></script>
+
+
+
+</body>
+<script>
+    $(document).ready(function() {
+        $("#sidebar ").mCustomScrollbar({
+            theme: "minimal "
+        });
+
+        $('.sidebarCollapse').on('click', function() {
+            $('#sidebar, #content').toggleClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+</script>
+
+</html>

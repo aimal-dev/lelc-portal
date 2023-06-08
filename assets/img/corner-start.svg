@@ -1,0 +1,17 @@
+<svg id="Group_27191" data-name="Group 27191" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="39.32" height="39.31" viewBox="0 0 39.32 39.31">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.235" y1="0.826" x2="-0.323" y2="0.039" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#371d71"/>
+      <stop offset="1" stop-color="#d00000"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_4513" data-name="Rectangle 4513" width="39.32" height="39.31" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="Group_27190" data-name="Group 27190" transform="translate(0 0)">
+    <g id="Group_27189" data-name="Group 27189" clip-path="url(#clip-path)">
+      <path id="Path_30307" data-name="Path 30307" d="M39.32,8V39.31A39.313,39.313,0,0,1,0,0H31.32a7.989,7.989,0,0,1,7.95,7.19,7.338,7.338,0,0,1,.05.81" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+  <path id="Icon_awesome-star" data-name="Icon awesome-star" d="M7.97.486,6.185,4.106l-3.994.582a.875.875,0,0,0-.484,1.493L4.6,9l-.684,3.978a.874.874,0,0,0,1.269.921l3.573-1.878L12.328,13.9a.875.875,0,0,0,1.269-.921L12.913,9,15.8,6.181a.875.875,0,0,0-.484-1.493l-3.994-.582L9.54.486a.876.876,0,0,0-1.569,0Z" transform="translate(13.879 9)" fill="#fff"/>
+</svg>
